@@ -1,11 +1,11 @@
 export default class Logo {
-  constructor (x = 0, y = 0) {
-    this.x = x
-    this.y = y
-  }
+  constructor () {
+    this.x = 0
+    this.y = 0
+    this.isInTable = false
+    this.isInBox = true
 
-  move (x, y) {
-    this.x = x
-    this.y = y
+    this.el = document.createElement('div')
+    this.el.classList.add('element')
   }
 }

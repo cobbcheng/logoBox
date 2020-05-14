@@ -1,9 +1,3 @@
-import Logo from './logo'
+import button from './button'
 
-const todo = 1
-console.log(1)
-
-const logo = new Logo()
-
-console.log(logo)
-
+button.init()

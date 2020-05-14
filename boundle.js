@@ -2,21 +2,29 @@
   'use strict';
 
   class Logo {
-    constructor (x = 0, y = 0) {
-      this.x = x;
-      this.y = y;
-    }
+    constructor () {
+      this.x = 0;
+      this.y = 0;
+      this.isInTable = false;
+      this.isInBox = true;
 
-    move (x, y) {
-      this.x = x;
-      this.y = y;
+      this.el = document.createElement('div');
+      this.el.classList.add('element');
     }
   }
 
-  console.log(1);
+  var button = {
+    init () {
+      const button = document.querySelector('.J-button');
+      const box = document.querySelector('.logo-box');
 
-  const logo = new Logo();
+      button.addEventListener('click', () => {
+        const logo = new Logo();
+        box.appendChild(logo.el);
+      });
+    }
+  };
 
-  console.log(logo);
+  button.init();
 
 }());
