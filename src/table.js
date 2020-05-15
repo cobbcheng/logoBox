@@ -1,4 +1,15 @@
-import Unit from './unit'
+// 描述网格
+class Grid {
+  constructor (x, y, id) {
+    this.x1 = x
+    this.y1 = y
+    this.x2 = x + 100
+    this.y2 = y + 100
+    this.id = id
+    this.hasEl = false
+  }
+}
+
 
 const table = new Array(5*5)
 
@@ -18,10 +29,8 @@ export const init = () => {
       indexY++
     }
 
-    table[i] = new Unit(x, y, id)
+    table[i] = new Grid(x, y, id)
   }
-
-  console.log(table)
 }
 
 export default table
